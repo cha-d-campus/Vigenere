@@ -15,6 +15,9 @@ public class Crypto {
             char matching_letter = mdp.charAt(index_modulo);
             int decalage = alphabet.indexOf(matching_letter);
             int lettre_encodee = alphabet.indexOf(mot.charAt(i)) + decalage;
+                if (lettre_encodee > 25){
+                    lettre_encodee = lettre_encodee % 25;
+                }
             char lettre_crypte = alphabet.charAt(lettre_encodee);
 
 //            System.out.println("i : " + i);
@@ -32,7 +35,7 @@ public class Crypto {
         }
         System.out.println("Le mot à chiffrer est : " + mot);
         System.out.println("La clé de chiffrement est : " + mdp);
-        System.out.println("Le mot chiffré est : " +msg_chiffre);
+        System.out.println("Le mot chiffré est : " + msg_chiffre);
     }
 
     public String getAlphabet(){
@@ -40,4 +43,5 @@ public class Crypto {
     }
 
 }
+
 

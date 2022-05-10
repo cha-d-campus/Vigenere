@@ -3,6 +3,8 @@ public class Main {
         Crypto encoder = new Crypto();
         String mdp = "deg";
         String message = "toto";
+        String a = "a";
+//        System.out.println("JE SUIS LA" + (int) a.charAt(0));
 
         System.out.println("\n---------- VERIFICATION DE NOTRE FONCTION -----------");
         System.out.println("Mot à chiffrer : " + message);
